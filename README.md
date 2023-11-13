@@ -1,14 +1,15 @@
 <center><h1>信用卡交易检测</h1></center>
 <p align="right">比较 intel 优化sklearn库与原生sklearn库</p>
 <h3>一、项目介绍</h3>
-<p>本项目参考：<a href="https://github.com/oneapi-src/credit-card-fraud-detection">https://github.com/oneapi-src/credit-card-fraud-detection</a> 实现。</p>
-<p>GitHub：<a href="https://github.com/HBY-STAR/credit-card-fraud-detection_intel">https://github.com/HBY-STAR/credit-card-fraud-detection_intel</p>
+<p>本项目由个人实现。</p>
+<p>参考：<a href="https://github.com/oneapi-src/credit-card-fraud-detection">https://github.com/oneapi-src/credit-card-fraud-detection</a> 实现。</p>
+<p>GitHub：<a href="https://github.com/HBY-STAR/credit-card-fraud-detection_intel">https://github.com/HBY-STAR/credit-card-fraud-detection_intel</a></p>
 问题描述：<br>
 &emsp;&emsp;2021 年，与信用卡欺诈相关的损失超过 120 亿美元，同比增长近 11%。就重大财务损失、信任和信誉而言，这是银行、客户和商户面临的一个令人担忧的问题。
 电子商务相关欺诈一直在以约 13% 的复合年增长率 (CAGR) 增加。由于欺诈性信用卡交易急剧增加，在交易时检测欺诈行为对于帮助消费者和银行非常重要。机器学习可以通过训练信用卡交易模型，然后使用这些模型更快、更准确地检测欺诈交易，在预测欺诈方面发挥至关重要的作用。<br><br>
-解决方案：<br>
+项目简历：（解决方案）<br>
 &emsp;&emsp;分别基于 xgboost 和 random_forest 算法，给出了两种解决方案，代码在src_xgboost和src_randomforest中。<br>
-&emsp;&emsp;数据预处理：由于数据集高度不平衡，故尝试通过聚类分析选出一些簇来进行训练，并比较使用这些簇与使用所有数据训练模型的性能。本项目通过dbscan算法进行聚类。
+&emsp;&emsp;数据预处理：由于数据集高度不平衡，故尝试通过聚类分析选出一些簇来进行训练，并比较使用这些簇与使用所有数据训练模型的性能。本项目通过dbscan算法进行聚类。使用的库为：sklearn.cluster.DBSCAN。
 
 ```python
 # flag：True则使用intel加速方案，False则使用原生sklearn
@@ -30,7 +31,7 @@ def DBSCAN_Clustering(data_raw, features_of_interest, epsilon, min_samp, flag):
     data_for_clustering['Clusters'] = db.labels_
     return data_for_clustering, clustering_time
 ```
-&emsp;&emsp;模型训练：本项目分别使用 xgboost 和 random_forest 算法来进行模型训练，并尝试通过超参数调整优化模型。xgboost模块本身为intel加速方案。random_forest 通过 flag 来确定是否使用intel加速方案。
+&emsp;&emsp;模型训练：本项目分别使用 xgboost 和 random_forest 算法来进行模型训练，并尝试通过超参数调整优化模型。xgboost模块本身为intel加速方案。random_forest 通过 flag 来确定是否使用intel加速方案。使用的库为：sklearn.ensemble.RandomForestClassifier 和 xgboost。
 
 ```python
 # flag：True则使用intel加速方案，False则使用原生sklearn
