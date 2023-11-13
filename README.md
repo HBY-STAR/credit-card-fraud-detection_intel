@@ -80,29 +80,29 @@ m_predict.log, ROC_not_patch.png, ROC_patch.png 为运行m_run_benchmarks_predic
 在使用 <a href="https://ark.intel.com/content/www/cn/zh/ark/products/213805/intel-core-i511400h-processor-12m-cache-up-to-4-50-ghz.html">i5-11400H</a> 和 <a href="https://ark.intel.com/content/www/cn/zh/ark/products/230493/intel-core-i513600k-processor-24m-cache-up-to-5-10-ghz.html">i5-13600K</a>的情况下使用 intel 加速方案对于 dbscan 和 random_forest 算法均有非常显著的提升，说明在笔记本和台式机上intel加速方案均可以很好地支持。下面以 <a href="https://ark.intel.com/content/www/cn/zh/ark/products/230493/intel-core-i513600k-processor-24m-cache-up-to-5-10-ghz.html">i5-13600K</a> 得到的结果进行具体分析：
 <h6>（1）random_forest:</h6>
 在执行 dbscan 时：<br> 
-&emsp;&emsp;not patch: 158.078 s&emsp;&emsp;patch:5.717 s<br>
-&emsp;&emsp;not patch: 144.927 s&emsp;&emsp;patch:5.815 s<br><br>
+&emsp;&emsp;not patch: <font color=red>158.078 s</font>&emsp;&emsp;patch:<font color=green>5.717 s</font><br>
+&emsp;&emsp;not patch: <font color=red>144.927 s</font>&emsp;&emsp;patch:<font color=green>5.815 s</font><br><br>
 在训练 random_forest 时：<br> 
 &emsp;cluster data:（num:961）<br>
-&emsp;&emsp;not patch: 0.149 s&emsp;&emsp;patch:1.152 s<br>
+&emsp;&emsp;not patch: <font color=red>0.149 s</font>&emsp;&emsp;patch:<font color=green>1.152 s</font><br>
 &emsp;full data:（num:199364）<br>
-&emsp;&emsp;not patch: 25.101 s&emsp;&emsp;patch:0.960 s<br><br>
+&emsp;&emsp;not patch: <font color=red>25.101 s</font>&emsp;&emsp;patch:<font color=green>0.960 s</font><br><br>
 在对 random_forest 进行超参数调整时：<br> 
 &emsp;cluster data:<br>
-&emsp;&emsp;not patch: 17.951 s&emsp;&emsp;patch:16.481 s<br>
+&emsp;&emsp;not patch: <font color=red>17.951 s</font>&emsp;&emsp;patch:<font color=green>16.481 s</font><br>
 &emsp;full data:<br>
-&emsp;&emsp;not patch: 2488.291 s&emsp;&emsp;patch:95.057 s<br><br>
+&emsp;&emsp;not patch: <font color=red>2488.291 s</font>&emsp;&emsp;patch:<font color=green>95.057 s</font><br><br>
 使用 random_forest 进行预测：<br> 
 f1_score:(test_data_num: 854430)<br>
 &emsp;cluster:<br>
-&emsp;&emsp;not patch: 0.918&emsp;&emsp;patch: 0.919<br>
+&emsp;&emsp;not patch: <font color=red>0.918</font>&emsp;&emsp;patch:<font color=green> 0.919</font><br>
 &emsp;full:<br>
-&emsp;&emsp;not patch: 0.925&emsp;&emsp;patch: 0.921<br>
+&emsp;&emsp;not patch: <font color=red>0.925</font>&emsp;&emsp;patch:<font color=green> 0.921</font><br>
 roc_area:(test_data_num: 85443)<br>
 &emsp;cluster:<br>
-&emsp;&emsp;not patch: 0.898&emsp;&emsp;patch: 0.933<br>
+&emsp;&emsp;not patch: <font color=red>0.898</font>&emsp;&emsp;patch: <font color=green>0.933</font><br>
 &emsp;full:<br>
-&emsp;&emsp;not patch: 0.968&emsp;&emsp;patch: 0.959<br><br>
+&emsp;&emsp;not patch: <font color=red>0.968</font>&emsp;&emsp;patch: <font color=green>0.959</font><br><br>
 
 &emsp;&emsp;由以上数据可以很明显地看出，在数据量较大的情况下（full data），使用intel方案有非常大的速度提升，同时在模型的 f1_score 和 roc_area 上与原生sklearn相差无几。同时值得注意的是，在对于经过了 dbscan 聚类的数据上，对于roc曲线面积，使用 intel 加速方案有着较明显的性能提升（0.898 vs 0.933）。说明 intel 加速方案在较小但更具代表性的数据上有着更为出色的表现。当数据量较小时，虽然 intel 加速方案有时较慢，但这些数据的训练时间均只有不到一分钟的时间。在相比于将超参数调整时间从 2488s 优化到不到 100s 这样25倍的提升上，偶尔有不到1分钟的差距显然无关紧要。
 
