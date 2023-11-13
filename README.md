@@ -2,7 +2,7 @@
 <p align="right">比较 intel 优化sklearn库与原生sklearn库</p>
 <h3>一、项目介绍</h3>
 <p>本项目由个人实现。</p>
-<p>参考：<a href="https://github.com/oneapi-src/credit-card-fraud-detection">https://github.com/oneapi-src/credit-card-fraud-detection</a> 实现。</p>
+<p>参考：<a href="https://github.com/oneapi-src/credit-card-fraud-detection">https://github.com/oneapi-src/credit-card-fraud-detection</a></p>
 <p>GitHub：<a href="https://github.com/HBY-STAR/credit-card-fraud-detection_intel">https://github.com/HBY-STAR/credit-card-fraud-detection_intel</a></p>
 问题描述：<br>
 &emsp;&emsp;2021 年，与信用卡欺诈相关的损失超过 120 亿美元，同比增长近 11%。就重大财务损失、信任和信誉而言，这是银行、客户和商户面临的一个令人担忧的问题。
