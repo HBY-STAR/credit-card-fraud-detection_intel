@@ -1,6 +1,6 @@
 <center><h1>信用卡交易检测</h1></center>
-<p align="right">比较 intel 优化sklearn库与原生sklearn库</p>
 <p align="right">参考：<a href="https://github.com/oneapi-src/credit-card-fraud-detection">https://github.com/oneapi-src/credit-card-fraud-detection</a></p>
+<p align="right">比较 intel 优化sklearn库与原生sklearn库</p>
 <h3>一、项目介绍</h3>
 <p>本项目由个人实现。</p>
 <p>GitHub：<a href="https://github.com/HBY-STAR/credit-card-fraud-detection_intel">https://github.com/HBY-STAR/credit-card-fraud-detection_intel</a></p>
