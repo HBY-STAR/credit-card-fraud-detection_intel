@@ -1,0 +1,164 @@
+// Not patch
+INFO:root:Predict:
+INFO:root:=======> Reading Data...
+INFO:root:=======> Read Data time = 0.467848539352417
+INFO:root:
+
+INFO:root:=======> Running the model on dataframe length of = 42500
+INFO:root:=======> Testing model_cluster on test data
+INFO:root:=======> Recall of model on test data = 0.7922077922077922
+INFO:root:=======> Macro f1 score of model on test data = 0.9120089542236338
+INFO:root:=======> Total Positives Predicted = 71
+INFO:root:=======> XGB prediction time for clustered data = 0.05900216102600098
+INFO:root:
+
+INFO:root:=======> Testing model_full on test data
+INFO:root:=======> Recall of model on full data = 0.7402597402597403
+INFO:root:=======> Macro f1 score of model on full data = 0.9159228816286207
+INFO:root:=======> Total Positives Predicted = 60
+INFO:root:=======> XGB prediction time for full data = 0.06289529800415039
+INFO:root:
+
+INFO:root:=======> Running the model on dataframe length of = 85443
+INFO:root:=======> Testing model_cluster on test data
+INFO:root:=======> Recall of model on test data = 0.7905405405405406
+INFO:root:=======> Macro f1 score of model on test data = 0.9177223293101398
+INFO:root:=======> Total Positives Predicted = 132
+INFO:root:=======> XGB prediction time for clustered data = 0.09250569343566895
+INFO:root:
+
+INFO:root:=======> Testing model_full on test data
+INFO:root:=======> Recall of model on full data = 0.7567567567567568
+INFO:root:=======> Macro f1 score of model on full data = 0.9209295510491151
+INFO:root:=======> Total Positives Predicted = 118
+INFO:root:=======> XGB prediction time for full data = 0.10998201370239258
+INFO:root:
+
+INFO:root:=======> Running the model on dataframe length of = 170886
+INFO:root:=======> Testing model_cluster on test data
+INFO:root:=======> Recall of model on test data = 0.7905405405405406
+INFO:root:=======> Macro f1 score of model on test data = 0.9177223293101398
+INFO:root:=======> Total Positives Predicted = 264
+INFO:root:=======> XGB prediction time for clustered data = 0.1813192367553711
+INFO:root:
+
+INFO:root:=======> Testing model_full on test data
+INFO:root:=======> Recall of model on full data = 0.7567567567567568
+INFO:root:=======> Macro f1 score of model on full data = 0.9209295510491151
+INFO:root:=======> Total Positives Predicted = 236
+INFO:root:=======> XGB prediction time for full data = 0.21066880226135254
+INFO:root:
+
+INFO:root:=======> Running the model on dataframe length of = 427215
+INFO:root:=======> Testing model_cluster on test data
+INFO:root:=======> Recall of model on test data = 0.7905405405405406
+INFO:root:=======> Macro f1 score of model on test data = 0.9177223293101398
+INFO:root:=======> Total Positives Predicted = 660
+INFO:root:=======> XGB prediction time for clustered data = 0.3730783462524414
+INFO:root:
+
+INFO:root:=======> Testing model_full on test data
+INFO:root:=======> Recall of model on full data = 0.7567567567567568
+INFO:root:=======> Macro f1 score of model on full data = 0.9209295510491151
+INFO:root:=======> Total Positives Predicted = 590
+INFO:root:=======> XGB prediction time for full data = 0.3817014694213867
+INFO:root:
+
+INFO:root:=======> Running the model on dataframe length of = 854430
+INFO:root:=======> Testing model_cluster on test data
+INFO:root:=======> Recall of model on test data = 0.7905405405405406
+INFO:root:=======> Macro f1 score of model on test data = 0.9177223293101398
+INFO:root:=======> Total Positives Predicted = 1320
+INFO:root:=======> XGB prediction time for clustered data = 0.6712095737457275
+INFO:root:
+
+INFO:root:=======> Testing model_full on test data
+INFO:root:=======> Recall of model on full data = 0.7567567567567568
+INFO:root:=======> Macro f1 score of model on full data = 0.9209295510491151
+INFO:root:=======> Total Positives Predicted = 1180
+INFO:root:=======> XGB prediction time for full data = 0.8110699653625488
+INFO:root:
+
+
+
+// patch
+INFO:root:Predict:
+INFO:root:=======> Reading Data...
+INFO:root:=======> Read Data time = 0.42061710357666016
+INFO:root:
+
+INFO:root:=======> Running the model on dataframe length of = 42500
+INFO:root:=======> Testing model_cluster on test data
+INFO:root:=======> Recall of model on test data = 0.7323943661971831
+INFO:root:=======> Macro f1 score of model on test data = 0.8908065880350067
+INFO:root:=======> Total Positives Predicted = 62
+INFO:root:=======> XGB prediction time for clustered data = 0.03490948677062988
+INFO:root:
+
+INFO:root:=======> Testing model_full on test data
+INFO:root:=======> Recall of model on full data = 0.704225352112676
+INFO:root:=======> Macro f1 score of model on full data = 0.9030844237285818
+INFO:root:=======> Total Positives Predicted = 53
+INFO:root:=======> XGB prediction time for full data = 0.04247426986694336
+INFO:root:
+
+INFO:root:=======> Running the model on dataframe length of = 85443
+INFO:root:=======> Testing model_cluster on test data
+INFO:root:=======> Recall of model on test data = 0.7905405405405406
+INFO:root:=======> Macro f1 score of model on test data = 0.9177223293101398
+INFO:root:=======> Total Positives Predicted = 132
+INFO:root:=======> XGB prediction time for clustered data = 0.07677125930786133
+INFO:root:
+
+INFO:root:=======> Testing model_full on test data
+INFO:root:=======> Recall of model on full data = 0.7567567567567568
+INFO:root:=======> Macro f1 score of model on full data = 0.9209295510491151
+INFO:root:=======> Total Positives Predicted = 118
+INFO:root:=======> XGB prediction time for full data = 0.07890701293945312
+INFO:root:
+
+INFO:root:=======> Running the model on dataframe length of = 170886
+INFO:root:=======> Testing model_cluster on test data
+INFO:root:=======> Recall of model on test data = 0.7905405405405406
+INFO:root:=======> Macro f1 score of model on test data = 0.9177223293101398
+INFO:root:=======> Total Positives Predicted = 264
+INFO:root:=======> XGB prediction time for clustered data = 0.15563225746154785
+INFO:root:
+
+INFO:root:=======> Testing model_full on test data
+INFO:root:=======> Recall of model on full data = 0.7567567567567568
+INFO:root:=======> Macro f1 score of model on full data = 0.9209295510491151
+INFO:root:=======> Total Positives Predicted = 236
+INFO:root:=======> XGB prediction time for full data = 0.15842890739440918
+INFO:root:
+
+INFO:root:=======> Running the model on dataframe length of = 427215
+INFO:root:=======> Testing model_cluster on test data
+INFO:root:=======> Recall of model on test data = 0.7905405405405406
+INFO:root:=======> Macro f1 score of model on test data = 0.9177223293101398
+INFO:root:=======> Total Positives Predicted = 660
+INFO:root:=======> XGB prediction time for clustered data = 0.31946706771850586
+INFO:root:
+
+INFO:root:=======> Testing model_full on test data
+INFO:root:=======> Recall of model on full data = 0.7567567567567568
+INFO:root:=======> Macro f1 score of model on full data = 0.9209295510491151
+INFO:root:=======> Total Positives Predicted = 590
+INFO:root:=======> XGB prediction time for full data = 0.3843367099761963
+INFO:root:
+
+INFO:root:=======> Running the model on dataframe length of = 854430
+INFO:root:=======> Testing model_cluster on test data
+INFO:root:=======> Recall of model on test data = 0.7905405405405406
+INFO:root:=======> Macro f1 score of model on test data = 0.9177223293101398
+INFO:root:=======> Total Positives Predicted = 1320
+INFO:root:=======> XGB prediction time for clustered data = 0.6333327293395996
+INFO:root:
+
+INFO:root:=======> Testing model_full on test data
+INFO:root:=======> Recall of model on full data = 0.7567567567567568
+INFO:root:=======> Macro f1 score of model on full data = 0.9209295510491151
+INFO:root:=======> Total Positives Predicted = 1180
+INFO:root:=======> XGB prediction time for full data = 0.783292293548584
+INFO:root:
+

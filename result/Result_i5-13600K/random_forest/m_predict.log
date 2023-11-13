@@ -1,0 +1,176 @@
+// Not patch
+INFO:root:Predict:
+INFO:root:=======> Reading Data...
+INFO:root:=======> Read Data time = 0.4266371726989746
+INFO:root:
+
+INFO:root:=======> Running the model on dataframe length of = 42500
+INFO:root:=======> Testing model_cluster on test data
+INFO:root:=======> Recall of model on test data = 0.8082191780821918
+INFO:root:=======> Macro f1 score of model on test data = 0.9243366999051094
+INFO:root:=======> Total Positives Predicted = 66
+INFO:root:=======> RF prediction time for clustered data = 0.045195817947387695
+INFO:root:
+
+INFO:root:=======> Testing model_full on test data
+INFO:root:=======> Recall of model on full data = 0.7945205479452054
+INFO:root:=======> Macro f1 score of model on full data = 0.9392996753603813
+INFO:root:=======> Total Positives Predicted = 59
+INFO:root:=======> RF prediction time for full data = 0.03576040267944336
+INFO:root:
+
+INFO:root:=======> Running the model on dataframe length of = 85443
+INFO:root:=======> Testing model_cluster on test data
+INFO:root:=======> Recall of model on test data = 0.7905405405405406
+INFO:root:=======> Macro f1 score of model on test data = 0.9177223293101398
+INFO:root:=======> Total Positives Predicted = 132
+INFO:root:=======> RF prediction time for clustered data = 0.09436774253845215
+INFO:root:
+
+INFO:root:=======> Testing model_full on test data
+INFO:root:=======> Recall of model on full data = 0.7635135135135135
+INFO:root:=======> Macro f1 score of model on full data = 0.9246948105229666
+INFO:root:=======> Total Positives Predicted = 118
+INFO:root:=======> RF prediction time for full data = 0.06258010864257812
+INFO:root:
+
+INFO:root:=======> Running the model on dataframe length of = 170886
+INFO:root:=======> Testing model_cluster on test data
+INFO:root:=======> Recall of model on test data = 0.7905405405405406
+INFO:root:=======> Macro f1 score of model on test data = 0.9177223293101398
+INFO:root:=======> Total Positives Predicted = 264
+INFO:root:=======> RF prediction time for clustered data = 0.21753954887390137
+INFO:root:
+
+INFO:root:=======> Testing model_full on test data
+INFO:root:=======> Recall of model on full data = 0.7635135135135135
+INFO:root:=======> Macro f1 score of model on full data = 0.9246948105229666
+INFO:root:=======> Total Positives Predicted = 236
+INFO:root:=======> RF prediction time for full data = 0.15532565116882324
+INFO:root:
+
+INFO:root:=======> Running the model on dataframe length of = 427215
+INFO:root:=======> Testing model_cluster on test data
+INFO:root:=======> Recall of model on test data = 0.7905405405405406
+INFO:root:=======> Macro f1 score of model on test data = 0.9177223293101398
+INFO:root:=======> Total Positives Predicted = 660
+INFO:root:=======> RF prediction time for clustered data = 0.6089136600494385
+INFO:root:
+
+INFO:root:=======> Testing model_full on test data
+INFO:root:=======> Recall of model on full data = 0.7635135135135135
+INFO:root:=======> Macro f1 score of model on full data = 0.9246948105229666
+INFO:root:=======> Total Positives Predicted = 590
+INFO:root:=======> RF prediction time for full data = 0.42315244674682617
+INFO:root:
+
+INFO:root:=======> Running the model on dataframe length of = 854430
+INFO:root:=======> Testing model_cluster on test data
+INFO:root:=======> Recall of model on test data = 0.7905405405405406
+INFO:root:=======> Macro f1 score of model on test data = 0.9177223293101398
+INFO:root:=======> Total Positives Predicted = 1320
+INFO:root:=======> RF prediction time for clustered data = 1.29779052734375
+INFO:root:
+
+INFO:root:=======> Testing model_full on test data
+INFO:root:=======> Recall of model on full data = 0.7635135135135135
+INFO:root:=======> Macro f1 score of model on full data = 0.9246948105229666
+INFO:root:=======> Total Positives Predicted = 1180
+INFO:root:=======> RF prediction time for full data = 0.8632075786590576
+INFO:root:
+
+
+
+// patch
+INFO:root:Predict:
+INFO:root:=======> Reading Data...
+INFO:root:=======> Read Data time = 0.43507933616638184
+INFO:root:
+
+INFO:root:=======> Running the model on dataframe length of = 42500
+INFO:root:=======> Testing model_cluster on test data
+INFO:root:sklearn.ensemble.RandomForestClassifier.predict: running accelerated version on CPU
+INFO:root:=======> Recall of model on test data = 0.7027027027027027
+INFO:root:=======> Macro f1 score of model on test data = 0.8937744318806675
+INFO:root:=======> Total Positives Predicted = 58
+INFO:root:=======> RF prediction time for clustered data = 0.06754636764526367
+INFO:root:
+
+INFO:root:=======> Testing model_full on test data
+INFO:root:sklearn.ensemble.RandomForestClassifier.predict: running accelerated version on CPU
+INFO:root:=======> Recall of model on full data = 0.6621621621621622
+INFO:root:=======> Macro f1 score of model on full data = 0.8918409425625922
+INFO:root:=======> Total Positives Predicted = 51
+INFO:root:=======> RF prediction time for full data = 0.01639080047607422
+INFO:root:
+
+INFO:root:=======> Running the model on dataframe length of = 85443
+INFO:root:=======> Testing model_cluster on test data
+INFO:root:sklearn.ensemble.RandomForestClassifier.predict: running accelerated version on CPU
+INFO:root:=======> Recall of model on test data = 0.7837837837837838
+INFO:root:=======> Macro f1 score of model on test data = 0.9186406826782112
+INFO:root:=======> Total Positives Predicted = 129
+INFO:root:=======> RF prediction time for clustered data = 0.04519462585449219
+INFO:root:
+
+INFO:root:=======> Testing model_full on test data
+INFO:root:sklearn.ensemble.RandomForestClassifier.predict: running accelerated version on CPU
+INFO:root:=======> Recall of model on full data = 0.7567567567567568
+INFO:root:=======> Macro f1 score of model on full data = 0.9209295510491151
+INFO:root:=======> Total Positives Predicted = 118
+INFO:root:=======> RF prediction time for full data = 0.03234219551086426
+INFO:root:
+
+INFO:root:=======> Running the model on dataframe length of = 170886
+INFO:root:=======> Testing model_cluster on test data
+INFO:root:sklearn.ensemble.RandomForestClassifier.predict: running accelerated version on CPU
+INFO:root:=======> Recall of model on test data = 0.7837837837837838
+INFO:root:=======> Macro f1 score of model on test data = 0.9186406826782112
+INFO:root:=======> Total Positives Predicted = 258
+INFO:root:=======> RF prediction time for clustered data = 0.10777664184570312
+INFO:root:
+
+INFO:root:=======> Testing model_full on test data
+INFO:root:sklearn.ensemble.RandomForestClassifier.predict: running accelerated version on CPU
+INFO:root:=======> Recall of model on full data = 0.7567567567567568
+INFO:root:=======> Macro f1 score of model on full data = 0.9209295510491151
+INFO:root:=======> Total Positives Predicted = 236
+INFO:root:=======> RF prediction time for full data = 0.08645105361938477
+INFO:root:
+
+INFO:root:=======> Running the model on dataframe length of = 427215
+INFO:root:=======> Testing model_cluster on test data
+INFO:root:sklearn.ensemble.RandomForestClassifier.predict: running accelerated version on CPU
+INFO:root:=======> Recall of model on test data = 0.7837837837837838
+INFO:root:=======> Macro f1 score of model on test data = 0.9186406826782112
+INFO:root:=======> Total Positives Predicted = 645
+INFO:root:=======> RF prediction time for clustered data = 0.31587934494018555
+INFO:root:
+
+INFO:root:=======> Testing model_full on test data
+INFO:root:sklearn.ensemble.RandomForestClassifier.predict: running accelerated version on CPU
+INFO:root:=======> Recall of model on full data = 0.7567567567567568
+INFO:root:=======> Macro f1 score of model on full data = 0.9209295510491151
+INFO:root:=======> Total Positives Predicted = 590
+INFO:root:=======> RF prediction time for full data = 0.38888978958129883
+INFO:root:
+
+INFO:root:=======> Running the model on dataframe length of = 854430
+INFO:root:=======> Testing model_cluster on test data
+INFO:root:sklearn.ensemble.RandomForestClassifier.predict: running accelerated version on CPU
+INFO:root:=======> Recall of model on test data = 0.7837837837837838
+INFO:root:=======> Macro f1 score of model on test data = 0.9186406826782112
+INFO:root:=======> Total Positives Predicted = 1290
+INFO:root:=======> RF prediction time for clustered data = 0.6903660297393799
+INFO:root:
+
+INFO:root:=======> Testing model_full on test data
+INFO:root:sklearn.ensemble.RandomForestClassifier.predict: running accelerated version on CPU
+INFO:root:=======> Recall of model on full data = 0.7567567567567568
+INFO:root:=======> Macro f1 score of model on full data = 0.9209295510491151
+INFO:root:=======> Total Positives Predicted = 1180
+INFO:root:=======> RF prediction time for full data = 0.8423459529876709
+INFO:root:
+
+INFO:root:sklearn.ensemble.RandomForestClassifier.predict_proba: running accelerated version on CPU
+INFO:root:sklearn.ensemble.RandomForestClassifier.predict_proba: running accelerated version on CPU

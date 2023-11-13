@@ -1,0 +1,68 @@
+// Not patch
+INFO:root:Hyper:
+INFO:root:=======> Reading Data...
+INFO:root:=======> Read Data time = 1.1441478729248047
+INFO:root:
+
+INFO:root:=======> Split time = 0.10346817970275879
+INFO:root:
+
+INFO:root:=======> Running DBSCAN Clustering and filtering for classification...
+INFO:root:=======> DBSCAN Clustering time = 158.52748680114746
+INFO:root:
+
+INFO:root:=======> Length of training dataframe post clustering = 961
+INFO:root:=======> Value counts of labeled data on training set = 0.3028095733610822
+INFO:root:=======> Value counts of labeled data on test set = 0.0017321489179921118
+INFO:root:=======> Length of full training dataframe = 199364
+INFO:root:
+
+INFO:root:=======> Training model_cluster on clustered data
+INFO:root:=======> XGB training time for clustered data = 10.770992040634155
+INFO:root:
+
+INFO:root:=======> Training model on Full data
+INFO:root:=======> XGB training time for full data = 56.873053312301636
+INFO:root:
+
+
+
+// patch
+INFO:root:Hyper:
+INFO:root:=======> Reading Data...
+INFO:root:=======> Read Data time = 1.1402943134307861
+INFO:root:
+
+INFO:root:sklearn.utils.validation._assert_all_finite: fallback to original Scikit-learn
+INFO:root:sklearn.utils.validation._assert_all_finite: fallback to original Scikit-learn
+INFO:root:sklearn.model_selection.train_test_split: running accelerated version on CPU
+INFO:root:sklearn.model_selection.train_test_split: running accelerated version on CPU
+INFO:root:=======> Split time = 0.168107271194458
+INFO:root:
+
+INFO:root:=======> Running DBSCAN Clustering and filtering for classification...
+INFO:root:sklearn.utils.validation._assert_all_finite: running accelerated version on CPU
+INFO:root:sklearn.utils.validation._assert_all_finite: running accelerated version on CPU
+INFO:root:sklearn.cluster.DBSCAN.fit: running accelerated version on CPU
+INFO:root:sklearn.utils.validation._assert_all_finite: running accelerated version on CPU
+INFO:root:=======> DBSCAN Clustering time = 12.75859546661377
+INFO:root:
+
+INFO:root:=======> Length of training dataframe post clustering = 961
+INFO:root:=======> Value counts of labeled data on training set = 0.3028095733610822
+INFO:root:=======> Value counts of labeled data on test set = 0.0017321489179921118
+INFO:root:=======> Length of full training dataframe = 199364
+INFO:root:
+
+INFO:root:=======> Training model_cluster on clustered data
+INFO:root:=======> XGB training time for clustered data = 9.914502143859863
+INFO:root:
+
+INFO:root:=======> Training model on Full data
+INFO:root:sklearn.utils.validation._assert_all_finite: fallback to original Scikit-learn
+INFO:root:=======> XGB training time for full data = 55.55095553398132
+INFO:root:
+
+
+
+
