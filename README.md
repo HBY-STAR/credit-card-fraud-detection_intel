@@ -1,13 +1,13 @@
-<center><h1>信用卡交易检测-比较 intel 优化sklearn库与原生sklearn库</h1></center>
+<center><h1>信用卡交易检测</h1></center>
 <p align="right">参考：<a href="https://github.com/oneapi-src/credit-card-fraud-detection">https://github.com/oneapi-src/credit-card-fraud-detection</a></p>
 <h3>一、项目介绍</h3>
-<p>本项目由个人实现。</p>
-<p>GitHub：<a href="https://github.com/HBY-STAR/credit-card-fraud-detection_intel">https://github.com/HBY-STAR/credit-card-fraud-detection_intel</a></p>
+<p>&emsp;本项目由个人实现，主要目的在于比较&emsp;原生sklearn库&emsp;与&emsp;intel优化sklearn库&emsp;中的部分算法（dbscan 和 random_forest）。</p>
+<p>&emsp;已上传到 github：<a href="https://github.com/HBY-STAR/credit-card-fraud-detection_intel">https://github.com/HBY-STAR/credit-card-fraud-detection_intel</a></p>
 问题描述：<br>
 &emsp;&emsp;2021 年，与信用卡欺诈相关的损失超过 120 亿美元，同比增长近 11%。就重大财务损失、信任和信誉而言，这是银行、客户和商户面临的一个令人担忧的问题。
 电子商务相关欺诈一直在以约 13% 的复合年增长率 (CAGR) 增加。由于欺诈性信用卡交易急剧增加，在交易时检测欺诈行为对于帮助消费者和银行非常重要。机器学习可以通过训练信用卡交易模型，然后使用这些模型更快、更准确地检测欺诈交易，在预测欺诈方面发挥至关重要的作用。<br><br>
 项目简历：（解决方案）<br>
-&emsp;&emsp;分别基于 xgboost 和 random_forest 算法，给出了两种解决方案，代码在src_xgboost和src_randomforest中。<br>
+&emsp;&emsp;分别基于 xgboost 和 random_forest 算法，给出了两种解决方案，代码分别在 src_xgboost 和 src_randomforest 中。<br>
 &emsp;&emsp;数据预处理：由于数据集高度不平衡，故尝试通过聚类分析选出一些簇来进行训练，并比较使用这些簇与使用所有数据训练模型的性能。本项目通过dbscan算法进行聚类。使用的库为：sklearn.cluster.DBSCAN。
 
 ```python
@@ -62,7 +62,7 @@ INFO:root:Train:
 INFO:root:=======> Reading Data...
 ...
 ```
-图片为绘制的roc曲线，下面以 RF_ROC_patch.png 为例:
+图片为绘制的roc曲线，通过文件名标识是否使用 intel 加速方案。下面以 RF_ROC_patch.png 为例:
 <img src="result\Result_i5-11400H\random_forest\RF_ROC_patch.png">
 
 m_train.log, m_hyper.log 分别为运行 m_run_benchmarks_train.py 和 m_run_benchmarks_hyper.py 得到的日志文件，通过控制运行时参数 [-i] 来决定是否使用intel加速方案。
@@ -116,6 +116,6 @@ intel 的 <a href="https://www.intel.com/content/www/us/en/developer/tools/oneap
 from sklearnex import patch_sklearn
 patch_sklearn()
 ```
-然后导入你需要使用的包，就可以直接获得明显的训练速度提升。<br>
+然后导入需要使用的包，就可以直接获得明显的训练速度提升。<br>
 因此下次在训练模型之前，不要忘了去浏览一下 <a href="https://www.intel.com/content/www/us/en/developer/tools/oneapi/ai-analytics-toolkit.html#gs.0w4s9y">oneAPI AI Kit</a> ，看看intel是否对你需要使用的算法进行了加速，如果有的话，记得 patch !
 
