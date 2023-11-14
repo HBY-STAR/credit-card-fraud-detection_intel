@@ -8,6 +8,20 @@
 电子商务相关欺诈一直在以约 13% 的复合年增长率 (CAGR) 增加。由于欺诈性信用卡交易急剧增加，在交易时检测欺诈行为对于帮助消费者和银行非常重要。机器学习可以通过训练信用卡交易模型，然后使用这些模型更快、更准确地检测欺诈交易，在预测欺诈方面发挥至关重要的作用。<br><br>
 项目简历：（解决方案）<br>
 &emsp;&emsp;分别基于 xgboost 和 random_forest 算法，给出了两种解决方案，代码分别在 src_xgboost 和 src_randomforest 中。<br>
+&emsp;&emsp;环境如下：
+
+```shell
+# 在其他系统上运行需更改源代码中的文件路径格式
+OS                            Windows
+
+Python                        3.11.4
+joblib                        1.2.0
+numpy                         1.24.3
+pandas                        2.1.1
+pathlib                       1.0.1
+scikit-learn                  1.2.2
+xgboost                       2.0.0
+```
 &emsp;&emsp;数据预处理：由于数据集高度不平衡，故尝试通过聚类分析选出一些簇来进行训练，并比较使用这些簇与使用所有数据训练模型的性能。本项目通过dbscan算法进行聚类。使用的库为：sklearn.cluster.DBSCAN。
 
 ```python
